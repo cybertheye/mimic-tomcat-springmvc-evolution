@@ -1,9 +1,6 @@
 package xyz.cybertheye.listener;
 
-import javax.servlet.ServletContextAttributeEvent;
-import javax.servlet.ServletContextAttributeListener;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
+import javax.servlet.*;
 import javax.servlet.annotation.WebListener;
 import javax.sound.midi.Soundbank;
 
@@ -32,7 +29,11 @@ public class SimpleServletListener implements ServletContextListener, ServletCon
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
+
         System.out.println("=====servlet context+++++");
+        sce.getServletContext();
+        Object source = sce.getSource();
+        System.out.println(source);
         System.out.println("inside contextInitialized:" + priority);
         System.out.println("=====servlet context-----");
     }

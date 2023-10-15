@@ -10,6 +10,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>step-1-tomcat-servlet</module>
+        <module>step-2-mimic-tomcat</module>
+        <module>step-3-springmvc-scaffold</module>
     </modules>
 
     <properties>

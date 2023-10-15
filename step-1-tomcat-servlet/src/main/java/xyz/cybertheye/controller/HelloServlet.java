@@ -46,6 +46,7 @@ public class HelloServlet extends HttpServlet {
         String uri = req.getRequestURI();
         String methodName = uri.substring(uri.lastIndexOf("/")+1);
 
+
         if("login".equals(methodName)){
             login(req,resp);
             return;
@@ -54,6 +55,7 @@ public class HelloServlet extends HttpServlet {
             hello(req,resp);
             return;
         }
+
     }
 
     private void hello(HttpServletRequest req, HttpServletResponse resp) throws IOException {
